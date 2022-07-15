@@ -1,14 +1,29 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
-        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <Authors>Anton Moldovan</Authors>
+        <Company>NBomber</Company>
+        <Version>0.0.0-beta.1</Version>
+        <Copyright>NBomber@2022</Copyright>        
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+        <PackageIcon>nbomber_icon.png</PackageIcon>
+        <RepositoryUrl>https://github.com/PragmaticFlow/NBomber.Push</RepositoryUrl>
+        <PackageTags>load-testing, performance-testing, integration-testing, fsharp</PackageTags>
+        <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+        <Description>Push extensions for NBomber to write push scenarios</Description>
     </PropertyGroup>
 
     <ItemGroup>
         <Compile Include="Push.fs" />
     </ItemGroup>
 
+    <ItemGroup>        
+        <None Include="../../assets/nbomber_icon.png" Pack="true" Visible="false" PackagePath="" />
+    </ItemGroup>
+    
     <ItemGroup>        
         <PackageReference Update="FSharp.Core" Version="6.0.5" />        
         <PackageReference Include="NBomber.Contracts" Version="3.0.0-beta.13" />        
