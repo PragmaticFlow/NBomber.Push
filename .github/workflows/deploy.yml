@@ -1,0 +1,21 @@
+name: deploy
+
+on:
+  push:
+    branches: [ "tests" ]
+
+jobs:
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 6.x.x
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Pack
+      run: dotnet pack src/NBomber.Push/NBomber.Push.fsproj -c Release -o artifacts --include-source
