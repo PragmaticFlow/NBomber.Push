@@ -11,10 +11,7 @@
 
     <ItemGroup>        
         <PackageReference Update="FSharp.Core" Version="6.0.5" />        
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\..\..\NBomber\src\NBomber.Contracts\NBomber.Contracts.fsproj" />
+        <PackageReference Include="NBomber.Contracts" Version="3.0.0-beta.13" />        
     </ItemGroup>
 
 </Project>
