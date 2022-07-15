@@ -4,11 +4,11 @@
         <TargetFramework>netstandard2.0</TargetFramework>
         <Authors>Anton Moldovan</Authors>
         <Company>NBomber</Company>
-        <Version>0.0.0-beta.1</Version>
+        <Version>0.1.0-beta3</Version>
         <Copyright>NBomber@2022</Copyright>        
         <IncludeSymbols>true</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-        <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
         <PackageIcon>nbomber_icon.png</PackageIcon>
         <RepositoryUrl>https://github.com/PragmaticFlow/NBomber.Push</RepositoryUrl>
         <PackageTags>load-testing, performance-testing, integration-testing, fsharp</PackageTags>
@@ -20,7 +20,8 @@
         <Compile Include="Push.fs" />
     </ItemGroup>
 
-    <ItemGroup>        
+    <ItemGroup>
+        <None Include="../../LICENSE" Pack="true" Visible="false" PackagePath="" />
         <None Include="../../assets/nbomber_icon.png" Pack="true" Visible="false" PackagePath="" />
     </ItemGroup>
     
