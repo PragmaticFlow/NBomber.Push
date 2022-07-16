@@ -2,7 +2,7 @@ name: deploy
 
 on:
   push:
-    branches: [ "tests" ]
+    branches: [ "main" ]
 
 jobs:
   deploy:
@@ -21,5 +21,3 @@ jobs:
       run: dotnet pack src/NBomber.Push/NBomber.Push.fsproj -c Release -o artifacts --include-source
     - name: Publish
       run: dotnet nuget push artifacts/**.nupkg -s https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_TOKEN }}
-      env:
-        NUGET_TOKEN: ${{ secrets.NUGET_TOKEN }}
