@@ -4,7 +4,7 @@
         <TargetFramework>netstandard2.0</TargetFramework>
         <Authors>Anton Moldovan</Authors>
         <Company>NBomber</Company>
-        <Version>0.1.0-beta3</Version>
+        <Version>1.0.0-rc</Version>
         <Copyright>NBomber@2022</Copyright>        
         <IncludeSymbols>true</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
@@ -14,6 +14,7 @@
         <PackageTags>load-testing, performance-testing, integration-testing, fsharp</PackageTags>
         <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
         <Description>Push extensions for NBomber to write push scenarios</Description>
+        <Title>NBomber.Push</Title>
     </PropertyGroup>
 
     <ItemGroup>
@@ -27,7 +28,7 @@
     
     <ItemGroup>        
         <PackageReference Update="FSharp.Core" Version="6.0.5" />        
-        <PackageReference Include="NBomber.Contracts" Version="3.0.0-beta.13" />        
+        <PackageReference Include="NBomber.Contracts" Version="3.0.0-rc" />        
     </ItemGroup>
 
 </Project>
